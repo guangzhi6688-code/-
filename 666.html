@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 双重编码声明，防止浏览器识别失败 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐世界</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 全系统通用中文字体，彻底避开微软雅黑缺失问题 */
+            font-family: "Microsoft YaHei", SimSun, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* 顶部 */
+        .header {
+            width: 1000px;
+            height: 150px;
+            margin: 20px auto 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 48px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .banner {
+            width: 500px;
+            height: 100px;
+            background: url("https://picsum.photos/500/100") no-repeat center;
+            background-size: cover;
+        }
+
+        .right-links a {
+            display: block;
+            color: green;
+            text-decoration: none;
+            margin: 8px 0;
+        }
+
+        /* 导航栏 */
+        .nav {
+            width: 1000px;
+            margin: 0 auto;
+            background: #32cd32;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+        }
+
+        .nav a:hover {
+            background: #228b22;
+        }
+
+        /* 主体 */
+        .container {
+            width: 1000px;
+            margin: 20px auto;
+            display: flex;
+        }
+
+        /* 左侧菜单 */
+        .sidebar {
+            width: 200px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            border: 1px solid green;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: green;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .sidebar a:hover {
+            background: #e8ffe8;
+        }
+
+        /* 右侧内容 */
+        .content {
+            flex: 1;
+            margin-left: 30px;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .music-item {
+            text-align: center;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .music-item img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .music-item p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .footer {
+            width: 1000px;
+            margin: 20px auto;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="header">
+        <div class="logo">音乐世界</div>
+        <div class="banner"></div>
+        <div class="right-links">
+            <a href=" ">加入收藏</a>
+            <a href="#">设为首页</a>
+            <a href="#">关于我们</a>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">流行音乐</a></li>
+            <li><a href="#">摇滚音乐</a></li>
+            <li><a href="#">古典音乐</a></li>
+            <li><a href="#">动漫音乐</a></li>
+            <li><a href="#">歌手专区</a></li>
+            <li><a href="#">音乐排行</a></li>
+        </ul>
+    </div>
+
+    <!-- 主体 -->
+    <div class="container">
+        <!-- 左侧菜单 -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">华语音乐</a></li>
+                <li><a href="#">欧美音乐</a></li>
+                <li><a href="#">日韩音乐</a></li>
+                <li><a href="#">古典音乐</a></li>
+                <li><a href="#">轻音乐</a></li>
+                <li><a href="#">动漫音乐</a></li>
+                <li><a href="#">影视原声</a></li>
+                <li><a href="#">热门歌单</a></li>
+                <li><a href="#">音乐推荐</a></li>
+            </ul>
+        </div>
+
+        <!-- 音乐展示区 -->
+        <div class="content">
+            <div class="music-grid">
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?1">
+                    </a>
+                    <p>周杰伦《晴天》</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?2">
+                    </a>
+                    <p>林俊杰《江南》</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?3">
+                    </a>
+                    <p>邓紫棋《光年之外》</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?4">
+                    </a>
+                    <p>Taylor Swift</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?5">
+                    </a>
+                    <p>Ed Sheeran</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?6">
+                    </a>
+                    <p>米津玄师《Lemon》</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?7">
+                    </a>
+                    <p>久石让</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?8">
+                    </a>
+                    <p>动漫音乐</p>
+                </div>
+                <div class="music-item">
+                    <a href="https://music.163.com/" target="_blank">
+                        <img src="https://picsum.photos/200?9">
+                    </a>
+                    <p>热门歌单</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        版权所有 音乐世界 Music World
+    </div>
+</body>
+</html>
